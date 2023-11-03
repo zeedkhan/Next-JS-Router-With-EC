@@ -1,6 +1,15 @@
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
+import { GoogleAnalytics } from "nextjs-google-analytics";
+
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+
+  return (
+    <>
+      <GoogleAnalytics trackPageViews gaMeasurementId='G-31YL7L6QCK' />
+
+      <Component {...pageProps} />
+    </>
+  )
 }
